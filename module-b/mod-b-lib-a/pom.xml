@@ -5,7 +5,7 @@
     <parent>
         <artifactId>module-b</artifactId>
         <groupId>com.github.ctjoreilly.complexa</groupId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.1</version>
     </parent>
 
     <artifactId>mod-b-lib-a</artifactId>
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>com.github.ctjoreilly.complexa</groupId>
             <artifactId>mod-b-lib-b</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
