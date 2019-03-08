@@ -4,7 +4,7 @@
 
     <groupId>com.github.ctjoreilly.complexa</groupId>
     <artifactId>mod-a-app-a</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <distributionManagement>
         <repository>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>com.github.ctjoreilly.complexa</groupId>
             <artifactId>mod-a-lib-a</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

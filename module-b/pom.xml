@@ -5,13 +5,13 @@
     <parent>
         <artifactId>lib-parent</artifactId>
         <groupId>com.github.ctjoreilly.complexa</groupId>
-        <version>1.0.1</version>
+        <version>1.0.2-SNAPSHOT</version>
         <relativePath>../lib-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>com.github.ctjoreilly.complexa</groupId>
     <artifactId>module-b</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
