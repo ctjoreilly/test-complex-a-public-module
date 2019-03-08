@@ -8,6 +8,10 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>app-a</module>
+    <module>lib-parent</module>
+    <module>module-a</module>
+    <module>module-b</module>
   </modules>
 
   <scm>
