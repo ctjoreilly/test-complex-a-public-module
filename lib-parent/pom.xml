@@ -4,15 +4,20 @@
 
     <groupId>com.github.ctjoreilly.complexa</groupId>
     <artifactId>lib-parent</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <distributionManagement>
         <repository>
-            <id>bintray-ctjoreilly-test-maven-repository</id>
-            <name>ctjoreilly-test-maven-repository</name>
-            <url>https://api.bintray.com/maven/ctjoreilly/test-maven-repository/test-public-package-4/;publish=1</url>
+            <id>io.cloudrepo.rit-private</id>
+            <name>io.cloudrepo.rit-private</name>
+            <url>https://susom.mycloudrepo.io/repositories/rit-private</url>
         </repository>
+        <snapshotRepository>
+            <id>io.cloudrepo.rit-private-snapshot</id>
+            <name>io.cloudrepo.rit-private-snapshot</name>
+            <url>https://susom.mycloudrepo.io/repositories/rit-private-snapshot</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
