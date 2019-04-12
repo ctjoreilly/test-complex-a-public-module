@@ -6,9 +6,9 @@ jdk:
 stages:
   - test
   - name: release-check
-    if: (branch =~ ^release.*$)
+    if: (branch =~ /^release.*/)
   - name: release
-    if: (branch =~ ^release.*$)
+    if: (branch =~ /^release.*/)
 
 before_install:
   # Ensure the settings we want to use are in place before running the default mvn install
