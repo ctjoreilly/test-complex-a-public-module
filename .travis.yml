@@ -1,0 +1,35 @@
+language: java
+
+jdk:
+  - openjdk8
+
+stages:
+  - test
+  - name: release-check
+    if: branch =~ /^Release-.*$/
+  - name: release
+    if: branch =~ /^Release-.*$/
+
+before_install:
+  # Ensure the settings we want to use are in place before running the default mvn install
+  - cp ./travis/maven-settings.xml $HOME/.m2/settings.xml
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - echo "test"
+        - mvn test
+      after_failure:
+        - echo "\n=== SUREFIRE REPORTS ===\n"
+        - for F in target/surefire-reports/*.txt; do echo $F; cat $F; echo; done
+    - stage: release-check
+      script:
+        - echo "release-check"
+        # Ensure we don't have any external SNAPSHOT dependencies
+        mvn --batch-mode release:prepare -DdryRun=true
+    - stage: release
+      script:
+        - echo "release"
+        - mvn --batch-mode release:prepare
+        - mvn --batch-mode release:perform
