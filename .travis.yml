@@ -31,5 +31,12 @@ jobs:
     - stage: release
       script:
         - echo "release"
+        # Git fix based on: https://github.com/sbt/sbt-release/issues/210
+        - echo "Fixing git setup for $TRAVIS_BRANCH in preparation for release"
+        - git checkout ${TRAVIS_BRANCH}
+        - git branch -u origin/${TRAVIS_BRANCH}
+        - git config branch.${TRAVIS_BRANCH}.remote origin
+        - git config branch.${TRAVIS_BRANCH}.merge refs/heads/${TRAVIS_BRANCH}
+        # Perform mvn release steps
         - mvn --batch-mode release:prepare -DscmCommentPrefix="[maven-release-plugin][skip travis]" # NOTE: this stop's travis from building based on the tag's commit/push.
         - mvn --batch-mode release:perform
