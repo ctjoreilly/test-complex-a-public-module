@@ -31,5 +31,5 @@ jobs:
     - stage: release
       script:
         - echo "release"
-        - mvn --batch-mode release:prepare
+        - mvn --batch-mode release:prepare -DscmCommentPrefix="[maven-release-plugin][skip travis]" # NOTE: this stop's travis from building based on the tag's commit/push.
         - mvn --batch-mode release:perform
