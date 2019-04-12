@@ -4,7 +4,7 @@
 
     <groupId>com.github.ctjoreilly.complexa</groupId>
     <artifactId>app-a</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.7</version>
 
     <distributionManagement>
         <repository>
