@@ -36,6 +36,8 @@ jobs:
         # Ensure we don't have any external SNAPSHOT dependencies
         - mvn --batch-mode release:prepare -DdryRun=true
     - stage: release
+      services:
+        - docker
       script:
         - echo "release"
         # Git fix based on: https://github.com/sbt/sbt-release/issues/210
@@ -47,3 +49,14 @@ jobs:
         # Perform mvn release steps
         - mvn --batch-mode release:prepare -DscmCommentPrefix="[maven-release-plugin][skip travis]" # NOTE: this stop's travis from building based on the tag's commit/push.
         - mvn --batch-mode release:perform
+        # Release Docker Image(s)
+        - echo "Docker image(s) release steps"
+        - echo "$DOCKER_API_TOKEN" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - cd ./target/checkout # Use the 'mvn release:perform' checkout to construct the docker images, so that we are using the same artifacts/versions as deployed to the maven repository
+        # Build the example 'ctjoreilly/test-complex-public-module'-app-a docker image
+        - cd ./app-a/target
+        - cp ./classes/Dockerfile .
+        - cp ./classes/docker-*.sh .
+        - chmod 764 *.sh
+        - ./docker-build.sh
+        - ./docker-push.sh
