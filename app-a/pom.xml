@@ -4,18 +4,18 @@
 
     <groupId>com.github.ctjoreilly.complexa</groupId>
     <artifactId>app-a</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
 
     <distributionManagement>
         <repository>
-            <id>io.cloudrepo.rit-private</id>
-            <name>io.cloudrepo.rit-private</name>
-            <url>https://susom.mycloudrepo.io/repositories/rit-private</url>
+            <id>io.cloudrepo.rit-public</id>
+            <name>io.cloudrepo.rit-public</name>
+            <url>https://susom.mycloudrepo.io/repositories/rit-public</url>
         </repository>
         <snapshotRepository>
-            <id>io.cloudrepo.rit-private-snapshot</id>
-            <name>io.cloudrepo.rit-private-snapshot</name>
-            <url>https://susom.mycloudrepo.io/repositories/rit-private-snapshot</url>
+            <id>io.cloudrepo.rit-public-snapshot</id>
+            <name>io.cloudrepo.rit-public-snapshot</name>
+            <url>https://susom.mycloudrepo.io/repositories/rit-public-snapshot</url>
         </snapshotRepository>
     </distributionManagement>
 </project>

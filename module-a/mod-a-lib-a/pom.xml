@@ -4,13 +4,13 @@
     <parent>
         <artifactId>lib-parent</artifactId>
         <groupId>com.github.ctjoreilly.complexa</groupId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>1.0.4-SNAPSHOT</version>
         <relativePath>../../lib-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>com.github.ctjoreilly.complexa</groupId>
     <artifactId>mod-a-lib-a</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
 
 
 </project>
