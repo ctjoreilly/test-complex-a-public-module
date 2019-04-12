@@ -4,7 +4,7 @@
 
   <groupId>com.github.ctjoreilly.complexa</groupId>
   <artifactId>test.complexa.public.module</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -18,7 +18,7 @@
     <url>https://github.com/ctjoreilly/test-complex-a-public-module/tree/${project.scm.tag}</url>
     <connection>scm:git:https://github.com/ctjoreilly/test-complex-a-public-module.git</connection>
     <developerConnection>scm:git:https://github.com/ctjoreilly/test-complex-a-public-module.git</developerConnection>
-    <tag>test.complexa.public.module-1.0.6</tag>
+    <tag>test.complexa.public.module-1.0.2</tag>
   </scm>
 
   <distributionManagement>
