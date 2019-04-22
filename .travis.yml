@@ -47,7 +47,7 @@ jobs:
         - git config branch.${TRAVIS_BRANCH}.remote origin
         - git config branch.${TRAVIS_BRANCH}.merge refs/heads/${TRAVIS_BRANCH}
         # Perform mvn release steps
-        - mvn --batch-mode release:prepare -DtagNameFormat="v@{project.version}"-DscmCommentPrefix="[maven-release-plugin][skip travis]" # NOTE: this stop's travis from building based on the tag's commit/push.
+        - mvn --batch-mode release:prepare -DtagNameFormat="v@{project.version}" -DscmCommentPrefix="[maven-release-plugin][skip travis]" # NOTE: this stop's travis from building based on the tag's commit/push.
         - mvn --batch-mode release:perform
         # Release Docker Image(s)
         - echo "Docker image(s) release steps"
