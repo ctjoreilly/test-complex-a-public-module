@@ -5,7 +5,7 @@
     <parent>
         <artifactId>module-b</artifactId>
         <groupId>com.github.ctjoreilly.complexa</groupId>
-        <version>1.0.8-SNAPSHOT</version>
+        <version>1.0.9-SNAPSHOT</version>
     </parent>
 
     <artifactId>mod-b-lib-b</artifactId>
